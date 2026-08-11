@@ -9,7 +9,7 @@ import { projects, WHATSAPP_URL } from '@/lib/content'
 export const metadata: Metadata = {
   title: 'Proyectos',
   description:
-    'Proyectos reales desarrollados por R3 Tech: sistemas de gestión, sitios web y plataformas en producción, además de CourtOS, nuestro producto en desarrollo.',
+    'Proyectos maquetados por R3 Tech y publicados en Netlify para verlos funcionando: sistemas de gestión, sitios web, además de CourtOS, nuestro producto en desarrollo.',
   alternates: { canonical: '/proyectos' },
 }
 
@@ -21,11 +21,11 @@ export default function ProyectosPage() {
           <Reveal className="max-w-2xl">
             <span className="eyebrow text-ink-3">Proyectos</span>
             <h1 className="mt-5 text-[2.5rem] leading-[1.06] font-medium tracking-tight text-ink sm:text-[3.25rem]">
-              Trabajo real, no maquetas de portfolio.
+              Proyectos maquetados, no solo ideas.
             </h1>
             <p className="mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-ink-2">
-              Cada proyecto acá está publicado o en desarrollo activo. Sin clientes inventados, sin métricas
-              infladas.
+              Cada proyecto acá está maquetado y publicado en Netlify para que lo veas funcionando, o en desarrollo
+              activo. Sin clientes inventados, sin métricas infladas.
             </p>
           </Reveal>
         </div>
@@ -46,7 +46,7 @@ export default function ProyectosPage() {
               <h2 className="text-[1.375rem] font-medium tracking-tight text-ink">
                 ¿Tu proyecto podría ser el próximo?
               </h2>
-              <p className="mt-2 max-w-md text-[14.5px] text-ink-2">
+              <p className="mt-2 max-w-md text-[15.5px] text-ink-2">
                 Contanos qué querés construir y te decimos cómo lo encaramos.
               </p>
             </div>

@@ -4,12 +4,12 @@ const isDevelopment = process.env.NODE_ENV === 'development'
 
 const contentSecurityPolicy = [
   "default-src 'self'",
-  `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ''}`,
+  `script-src 'self' 'unsafe-inline' https://*.clarity.ms https://www.googletagmanager.com${isDevelopment ? " 'unsafe-eval'" : ''}`,
   "script-src-attr 'none'",
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' data: https:",
   "font-src 'self' data:",
-  `connect-src 'self' https://*.vercel-insights.com https://*.clarity.ms${isDevelopment ? ' ws: wss:' : ''}`,
+  `connect-src 'self' https://*.vercel-insights.com https://*.clarity.ms https://www.googletagmanager.com https://*.google-analytics.com https://*.analytics.google.com${isDevelopment ? ' ws: wss:' : ''}`,
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",

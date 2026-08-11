@@ -17,3 +17,6 @@ build/
 *.tsbuildinfo
 .DS_Store
 Thumbs.db
+
+# Design references
+reference/

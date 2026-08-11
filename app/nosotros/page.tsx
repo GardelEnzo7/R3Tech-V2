@@ -57,7 +57,7 @@ export default function NosotrosPage() {
             {principles.map((principle) => (
               <RevealItem key={principle.title}>
                 <h2 className="text-[1.0625rem] font-semibold text-ink">{principle.title}</h2>
-                <p className="mt-3 text-[14.5px] leading-relaxed text-ink-2">{principle.description}</p>
+                <p className="mt-3 text-[15.5px] leading-relaxed text-ink-2">{principle.description}</p>
               </RevealItem>
             ))}
           </RevealGroup>
@@ -85,7 +85,7 @@ export default function NosotrosPage() {
                     <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-accent/[0.08] text-accent">
                       <Check className="size-3.5" />
                     </span>
-                    <span className="text-[15px] text-ink">{benefit}</span>
+                    <span className="text-[16px] text-ink">{benefit}</span>
                   </RevealItem>
                 ))}
               </RevealGroup>
@@ -99,7 +99,7 @@ export default function NosotrosPage() {
           <Reveal className="flex flex-col items-start gap-6 rounded-2xl border border-line-strong bg-paper-sunken px-7 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-10">
             <div>
               <h2 className="text-[1.375rem] font-medium tracking-tight text-ink">Hablemos de tu proyecto</h2>
-              <p className="mt-2 max-w-md text-[14.5px] text-ink-2">
+              <p className="mt-2 max-w-md text-[15.5px] text-ink-2">
                 Contanos qué necesitás y te respondemos por WhatsApp o email.
               </p>
             </div>

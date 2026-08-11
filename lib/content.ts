@@ -18,6 +18,23 @@ export const site = {
 export const WHATSAPP_URL =
   'https://wa.me/5493412513986?text=Hola%20R3%20Tech%2C%20quiero%20solicitar%20un%20presupuesto.'
 
+/**
+ * Next.js shallow-merges metadata per segment: a page that sets its own
+ * `openGraph` object replaces the parent's entirely, dropping `images`
+ * unless it's spread back in. Every page-level `openGraph` export should
+ * include `...OG_IMAGE` (or its own more specific image) for this reason.
+ */
+export const OG_IMAGE = {
+  images: [
+    {
+      url: `${site.url}/brand/og-image.png`,
+      width: 1731,
+      height: 909,
+      alt: `${site.name} — ${site.tagline}`,
+    },
+  ],
+}
+
 export const nav = [
   { label: 'Servicios', href: '/servicios' },
   { label: 'Proyectos', href: '/proyectos' },

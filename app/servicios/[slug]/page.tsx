@@ -7,7 +7,7 @@ import { CtaLink } from '@/components/ui/button'
 import { WhatsAppIcon } from '@/components/ui/icons'
 import { Reveal, RevealGroup, RevealItem } from '@/components/motion/reveal'
 import { ProjectRow } from '@/components/projects/project-row'
-import { getServiceBySlug, projects, serviceCategories, services, site, WHATSAPP_URL } from '@/lib/content'
+import { getServiceBySlug, OG_IMAGE, projects, serviceCategories, services, site, WHATSAPP_URL } from '@/lib/content'
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }))
@@ -31,6 +31,7 @@ export async function generateMetadata({
       title: `${service.title} | ${site.name}`,
       description: service.summary,
       url: `${site.url}/servicios/${service.slug}`,
+      ...OG_IMAGE,
     },
   }
 }
@@ -54,14 +55,14 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <Reveal>
             <Link
               href="/servicios"
-              className="group/back inline-flex items-center gap-2 text-[13px] font-medium text-ink-2 transition-colors hover:text-ink"
+              className="group/back inline-flex items-center gap-2 text-[14px] font-medium text-ink-2 transition-colors hover:text-ink"
             >
               <ArrowLeft className="size-3.5 transition-transform duration-300 group-hover/back:-translate-x-0.5" />
               Servicios
             </Link>
 
             <div className="mt-8 flex items-baseline gap-4">
-              <span className="index-num text-[14px] text-ink-3">{service.index}</span>
+              <span className="index-num text-[15px] text-ink-3">{service.index}</span>
               <span className="eyebrow text-ink-3">{category?.label}</span>
             </div>
 
@@ -85,17 +86,17 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <div className="lg:col-span-7">
             <Reveal className="flex flex-col gap-5">
               {service.description.map((paragraph) => (
-                <p key={paragraph} className="text-[15.5px] leading-relaxed text-ink-2">
+                <p key={paragraph} className="text-[16.5px] leading-relaxed text-ink-2">
                   {paragraph}
                 </p>
               ))}
             </Reveal>
 
             <Reveal delay={0.1} className="mt-10">
-              <h2 className="text-[13px] font-semibold tracking-[0.02em] text-ink">Qué incluye</h2>
+              <h2 className="text-[14px] font-semibold tracking-[0.02em] text-ink">Qué incluye</h2>
               <ul className="mt-5 flex flex-col gap-3.5">
                 {service.includes.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-[14.5px] text-ink">
+                  <li key={item} className="flex items-start gap-3 text-[15.5px] text-ink">
                     <span className="mt-0.5 grid size-5 shrink-0 place-items-center rounded-full bg-accent/[0.08] text-accent">
                       <Check className="size-3" />
                     </span>
@@ -109,7 +110,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <div className="lg:col-span-4 lg:col-start-9">
             <Reveal delay={0.15} className="rounded-2xl border border-line-strong bg-paper-sunken p-7">
               <h2 className="eyebrow text-ink-3">Para quién es</h2>
-              <p className="mt-4 text-[14.5px] leading-relaxed text-ink">{service.forWho}</p>
+              <p className="mt-4 text-[15.5px] leading-relaxed text-ink">{service.forWho}</p>
             </Reveal>
           </div>
         </div>

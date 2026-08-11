@@ -16,7 +16,7 @@ export function Hero() {
     <section className="relative overflow-hidden pt-40 pb-24 sm:pt-48 sm:pb-32 lg:pt-56 lg:pb-40">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 right-[-8%] hidden w-[46vw] max-w-[620px] -translate-y-1/2 opacity-90 lg:block"
+        className="pointer-events-none absolute top-1/2 right-[2%] hidden w-[40vw] max-w-[560px] -translate-y-1/2 lg:block"
       >
         <HeroMark className="aspect-square w-full" />
       </div>
@@ -57,7 +57,7 @@ export function Hero() {
             className="mt-11 flex flex-col items-start gap-4 sm:flex-row sm:items-center"
           >
             <CtaLink href={WHATSAPP_URL} external>
-              <WhatsAppIcon />
+              <WhatsAppIcon className="size-5" />
               Hablar por WhatsApp
             </CtaLink>
             <CtaLink href="/proyectos" variant="outline">
@@ -74,7 +74,7 @@ export function Hero() {
         className="pointer-events-none absolute inset-x-0 bottom-8 hidden justify-center sm:flex"
       >
         <span className="flex flex-col items-center gap-2 text-ink-3">
-          <span className="eyebrow text-[9px]">Descubrí más</span>
+          <span className="eyebrow text-[10px]">Descubrí más</span>
           <ArrowDown className="size-3.5 animate-bounce motion-reduce:animate-none" />
         </span>
       </motion.div>

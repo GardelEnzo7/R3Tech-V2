@@ -9,6 +9,7 @@ import { Logo } from '@/components/ui/logo'
 import { CtaLink } from '@/components/ui/button'
 import { WhatsAppIcon } from '@/components/ui/icons'
 import { MobileNav } from '@/components/layout/mobile-nav'
+import { ThemeMenu } from '@/components/theme/theme-menu'
 import { nav, WHATSAPP_URL } from '@/lib/content'
 import { cn } from '@/lib/utils'
 
@@ -51,7 +52,7 @@ export function SiteHeader() {
                     key={item.href}
                     href={item.href}
                     className={cn(
-                      'group/nav relative rounded-full px-4 py-2 text-[13px] font-medium tracking-[0.01em] transition-colors duration-300',
+                      'group/nav relative rounded-full px-4 py-2.5 text-[15px] font-medium tracking-[0.01em] transition-colors duration-300',
                       active ? 'text-ink' : 'text-ink-2 hover:text-ink',
                     )}
                   >
@@ -68,11 +69,13 @@ export function SiteHeader() {
               })}
             </nav>
 
-            <div className="flex items-center gap-2.5">
-              <CtaLink href={WHATSAPP_URL} external className="hidden px-5 py-2.5 text-[12px] sm:inline-flex">
-                <WhatsAppIcon className="size-[15px]" />
+            <div className="flex items-center gap-3">
+              <CtaLink href={WHATSAPP_URL} external className="hidden px-5 py-2.5 text-[14px] sm:inline-flex">
+                <WhatsAppIcon className="size-[19px]" />
                 WhatsApp
               </CtaLink>
+
+              <ThemeMenu className="hidden lg:inline-flex" />
 
               <button
                 type="button"

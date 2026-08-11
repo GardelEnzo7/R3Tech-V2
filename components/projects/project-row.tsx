@@ -42,9 +42,9 @@ export function ProjectRow({ project, reverse = false }: { project: Project; rev
         <div className="flex items-center gap-3">
           <span
             className={cn(
-              'eyebrow rounded-full border px-2.5 py-1 text-[9px]',
+              'eyebrow rounded-full border px-2.5 py-1 text-[10px]',
               isLive
-                ? 'border-emerald-600/25 bg-emerald-600/[0.08] text-emerald-700'
+                ? 'border-success/25 bg-success/[0.08] text-success'
                 : 'border-accent/30 bg-accent/[0.08] text-accent',
             )}
           >
@@ -56,13 +56,13 @@ export function ProjectRow({ project, reverse = false }: { project: Project; rev
         <h3 className="mt-4 text-[1.75rem] font-medium tracking-tight text-ink sm:text-[2.125rem]">
           {project.name}
         </h3>
-        <p className="mt-4 max-w-md text-[15px] leading-relaxed text-ink-2">{project.summary}</p>
+        <p className="mt-4 max-w-md text-[16px] leading-relaxed text-ink-2">{project.summary}</p>
 
         <ul className="mt-6 flex flex-wrap gap-2">
           {project.features.map((feature) => (
             <li
               key={feature}
-              className="rounded-full border border-line-strong px-3 py-1.5 text-[12.5px] text-ink-2"
+              className="rounded-full border border-line-strong px-3 py-1.5 text-[13.5px] text-ink-2"
             >
               {feature}
             </li>
@@ -72,7 +72,7 @@ export function ProjectRow({ project, reverse = false }: { project: Project; rev
         <div className="mt-8 flex flex-wrap items-center gap-6">
           <Link
             href={`/proyectos/${project.slug}`}
-            className="group/link inline-flex items-center gap-2 text-[13px] font-semibold tracking-[0.02em] text-ink"
+            className="group/link inline-flex items-center gap-2 text-[14px] font-semibold tracking-[0.02em] text-ink"
           >
             Ver caso completo
             <ArrowUpRight className="size-4 text-accent transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
@@ -83,7 +83,7 @@ export function ProjectRow({ project, reverse = false }: { project: Project; rev
               href={project.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[13px] text-ink-2 transition-colors duration-300 hover:text-ink"
+              className="inline-flex items-center gap-2 text-[14px] text-ink-2 transition-colors duration-300 hover:text-ink"
             >
               Sitio en vivo
               <ArrowUpRight className="size-3.5" />

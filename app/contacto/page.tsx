@@ -72,7 +72,7 @@ export default function ContactoPage() {
                     <span className="mt-1 block truncate text-[1.375rem] font-medium tracking-tight text-ink sm:text-[1.75rem]">
                       {value}
                     </span>
-                    <span className="mt-1 block text-[13px] text-ink-2">{hint}</span>
+                    <span className="mt-1 block text-[14px] text-ink-2">{hint}</span>
                   </span>
                   <ArrowUpRight className="size-5 shrink-0 text-ink-3 transition-all duration-300 group-hover/row:-translate-y-0.5 group-hover/row:translate-x-0.5 group-hover/row:text-accent" />
                 </a>
@@ -89,8 +89,8 @@ export default function ContactoPage() {
               <MapPin className="size-[18px]" />
             </span>
             <div>
-              <h2 className="text-[15px] font-semibold text-ink">Zona de trabajo</h2>
-              <p className="mt-1.5 max-w-md text-[14.5px] leading-relaxed text-ink-2">
+              <h2 className="text-[16px] font-semibold text-ink">Zona de trabajo</h2>
+              <p className="mt-1.5 max-w-md text-[15.5px] leading-relaxed text-ink-2">
                 Con base en {site.region}. Trabajamos de forma remota con clientes en cualquier parte, y de
                 forma presencial en Rosario y alrededores.
               </p>

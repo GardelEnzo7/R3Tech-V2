@@ -20,7 +20,7 @@ export function CourtOsGraphic({ className }: { className?: string }) {
           <span className="size-2 rounded-full bg-ink/15" />
           <span className="h-2 w-20 rounded-full bg-ink/10" />
         </div>
-        <span className="eyebrow rounded-full border border-accent/30 bg-accent/[0.08] px-2.5 py-1 text-[8.5px] text-accent">
+        <span className="eyebrow rounded-full border border-accent/30 bg-accent/[0.08] px-2.5 py-1 text-[9.5px] text-accent">
           En desarrollo
         </span>
       </div>

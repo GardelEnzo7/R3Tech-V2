@@ -17,7 +17,7 @@ export function SiteFooter() {
         <div className="grid gap-12 py-16 md:grid-cols-12 md:py-20">
           <div className="md:col-span-5">
             <Logo />
-            <p className="mt-6 max-w-xs text-[14px] leading-relaxed text-ink-2">
+            <p className="mt-6 max-w-xs text-[15px] leading-relaxed text-ink-2">
               Desarrollo de software, plataformas web y soluciones IT para empresas que necesitan crecer con
               tecnología confiable. Trabajamos de forma remota y presencial en {site.region}.
             </p>
@@ -28,7 +28,7 @@ export function SiteFooter() {
             <ul className="mt-5 flex flex-col gap-3">
               {nav.map((item) => (
                 <li key={item.href}>
-                  <a href={item.href} className="text-[14px] text-ink-2 transition-colors duration-300 hover:text-ink">
+                  <a href={item.href} className="text-[15px] text-ink-2 transition-colors duration-300 hover:text-ink">
                     {item.label}
                   </a>
                 </li>
@@ -38,10 +38,10 @@ export function SiteFooter() {
 
           <div className="md:col-span-4">
             <h2 className="eyebrow text-ink-3">Contacto</h2>
-            <a href={site.mailto} className="mt-5 block text-[14px] text-ink-2 transition-colors duration-300 hover:text-ink">
+            <a href={site.mailto} className="mt-5 block text-[15px] text-ink-2 transition-colors duration-300 hover:text-ink">
               {site.email}
             </a>
-            <p className="mt-2 text-[14px] text-ink-2">{site.whatsappNumber}</p>
+            <p className="mt-2 text-[15px] text-ink-2">{site.whatsappNumber}</p>
 
             <ul className="mt-7 flex flex-wrap gap-2">
               {socials.map(({ label, href, Icon }) => (
@@ -62,12 +62,12 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col items-start justify-between gap-4 border-t border-line py-7 sm:flex-row sm:items-center">
-          <p className="text-[12px] tracking-wide text-ink-3">
+          <p className="text-[13px] tracking-wide text-ink-3">
             © {new Date().getFullYear()} {site.legalName}. Todos los derechos reservados.
           </p>
 
           <div className="flex items-center gap-5">
-            <p className="eyebrow text-[9px] text-ink-3">{site.tagline}</p>
+            <p className="eyebrow text-[10px] text-ink-3">{site.tagline}</p>
             <a
               href="#top"
               aria-label="Volver arriba"

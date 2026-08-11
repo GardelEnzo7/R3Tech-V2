@@ -37,9 +37,9 @@ export function ProcessTimeline() {
                   className="absolute top-0.5 left-0 inline-block size-[9px] shrink-0 rounded-full border-2 border-accent bg-paper-sunken lg:relative lg:mb-6"
                   aria-hidden="true"
                 />
-                <span className="index-num block text-[12px] text-ink-3 lg:mt-0">{step.index}</span>
+                <span className="index-num block text-[13px] text-ink-3 lg:mt-0">{step.index}</span>
                 <h3 className="mt-2 text-[1.05rem] font-semibold text-ink">{step.title}</h3>
-                <p className="mt-2 max-w-[22ch] text-[13.5px] leading-relaxed text-ink-2">{step.description}</p>
+                <p className="mt-2 max-w-[22ch] text-[14.5px] leading-relaxed text-ink-2">{step.description}</p>
               </RevealItem>
             ))}
           </RevealGroup>

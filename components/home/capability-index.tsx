@@ -15,7 +15,7 @@ export function CapabilityIndex() {
               <h2 className="mt-5 max-w-sm text-[2rem] leading-[1.08] font-medium tracking-tight text-ink sm:text-[2.5rem]">
                 Todo lo que tu negocio necesita de tecnología, en un mismo lugar.
               </h2>
-              <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-ink-2">
+              <p className="mt-6 max-w-sm text-[16px] leading-relaxed text-ink-2">
                 Seis capacidades centrales que cubren desde el primer sistema interno hasta la plataforma que
                 se convierte en tu producto.
               </p>
@@ -30,12 +30,12 @@ export function CapabilityIndex() {
                     href={`/servicios/${service.slug}`}
                     className="group/row grid grid-cols-[auto_1fr_auto] items-center gap-x-5 border-b border-line py-6 transition-colors duration-300 first:border-t hover:border-ink/20 sm:gap-x-8 sm:py-7"
                   >
-                    <span className="index-num text-[13px] text-ink-3">{service.index}</span>
+                    <span className="index-num text-[14px] text-ink-3">{service.index}</span>
                     <span className="min-w-0">
                       <span className="block text-[1.25rem] font-medium tracking-tight text-ink transition-colors duration-300 group-hover/row:text-accent sm:text-[1.5rem]">
                         {service.title}
                       </span>
-                      <span className="mt-1 block truncate text-[13.5px] text-ink-2 sm:text-[14px]">
+                      <span className="mt-1 block truncate text-[14.5px] text-ink-2 sm:text-[15px]">
                         {service.short}
                       </span>
                     </span>

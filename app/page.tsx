@@ -6,7 +6,7 @@ import { ProcessTimeline } from '@/components/home/process-timeline'
 import { FeaturedProjects } from '@/components/home/featured-projects'
 import { Trust } from '@/components/home/trust'
 import { ContactCta } from '@/components/home/contact-cta'
-import { site } from '@/lib/content'
+import { OG_IMAGE, site } from '@/lib/content'
 
 export const metadata: Metadata = {
   title: 'R3 Tech | Software a Medida, Desarrollo Web e IT Solutions',
@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     url: site.url,
     title: 'R3 Tech | Software a Medida, Desarrollo Web e IT Solutions',
     description: 'Construimos la tecnología que tu negocio necesita.',
+    ...OG_IMAGE,
   },
 }
 

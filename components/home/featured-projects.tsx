@@ -13,14 +13,14 @@ export function FeaturedProjects() {
           <Reveal>
             <span className="eyebrow text-ink-3">Qué construimos</span>
             <h2 className="mt-5 max-w-lg text-[2rem] leading-[1.08] font-medium tracking-tight text-ink sm:text-[2.5rem]">
-              Proyectos reales, no maquetas.
+              Proyectos maquetados, publicados para que los veas.
             </h2>
           </Reveal>
 
           <Reveal delay={0.1}>
             <Link
               href="/proyectos"
-              className="group/link inline-flex items-center gap-2 text-[13px] font-semibold text-ink"
+              className="group/link inline-flex items-center gap-2 text-[14px] font-semibold text-ink"
             >
               Ver todos los proyectos
               <ArrowUpRight className="size-4 text-accent transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />

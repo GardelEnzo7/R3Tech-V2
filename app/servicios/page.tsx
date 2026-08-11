@@ -38,7 +38,7 @@ export default function ServiciosPage() {
             <div className="container-page">
               <Reveal className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
                 <h2 className="text-[1.5rem] font-medium tracking-tight text-ink">{category.label}</h2>
-                <p className="text-[14px] text-ink-2">{category.description}</p>
+                <p className="text-[15px] text-ink-2">{category.description}</p>
               </Reveal>
 
               <RevealGroup className="mt-8 flex flex-col" stagger={0.06}>
@@ -48,12 +48,12 @@ export default function ServiciosPage() {
                       href={`/servicios/${service.slug}`}
                       className="group/row grid grid-cols-[auto_1fr_auto] items-center gap-x-5 border-b border-line py-6 transition-colors duration-300 first:border-t hover:border-ink/20 sm:gap-x-8 sm:py-7"
                     >
-                      <span className="index-num text-[13px] text-ink-3">{service.index}</span>
+                      <span className="index-num text-[14px] text-ink-3">{service.index}</span>
                       <span className="min-w-0">
                         <span className="block text-[1.25rem] font-medium tracking-tight text-ink transition-colors duration-300 group-hover/row:text-accent sm:text-[1.5rem]">
                           {service.title}
                         </span>
-                        <span className="mt-1 block text-[13.5px] text-ink-2 sm:text-[14px]">
+                        <span className="mt-1 block text-[14.5px] text-ink-2 sm:text-[15px]">
                           {service.summary}
                         </span>
                       </span>
@@ -76,7 +76,7 @@ export default function ServiciosPage() {
               <h2 className="text-[1.375rem] font-medium tracking-tight text-ink">
                 ¿No estás seguro qué necesitás?
               </h2>
-              <p className="mt-2 max-w-md text-[14.5px] text-ink-2">
+              <p className="mt-2 max-w-md text-[15.5px] text-ink-2">
                 Contanos tu caso y te ayudamos a definir el alcance correcto, sin compromiso.
               </p>
             </div>

@@ -9,7 +9,7 @@ import { WhatsAppIcon } from '@/components/ui/icons'
 import { Reveal, RevealGroup, RevealItem } from '@/components/motion/reveal'
 import { CourtOsGraphic } from '@/components/projects/courtos-graphic'
 import { cn } from '@/lib/utils'
-import { getProjectBySlug, projects, site, WHATSAPP_URL } from '@/lib/content'
+import { getProjectBySlug, OG_IMAGE, projects, site, WHATSAPP_URL } from '@/lib/content'
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }))
@@ -32,7 +32,7 @@ export async function generateMetadata({
       title: `${project.name} | ${site.name}`,
       description: project.summary,
       url: `${site.url}/proyectos/${project.slug}`,
-      images: project.image ? [{ url: project.image }] : undefined,
+      ...(project.image ? { images: [{ url: project.image }] } : OG_IMAGE),
     },
   }
 }
@@ -54,7 +54,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           <Reveal>
             <Link
               href="/proyectos"
-              className="group/back inline-flex items-center gap-2 text-[13px] font-medium text-ink-2 transition-colors hover:text-ink"
+              className="group/back inline-flex items-center gap-2 text-[14px] font-medium text-ink-2 transition-colors hover:text-ink"
             >
               <ArrowLeft className="size-3.5 transition-transform duration-300 group-hover/back:-translate-x-0.5" />
               Proyectos
@@ -63,9 +63,9 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             <div className="mt-8 flex items-center gap-3">
               <span
                 className={cn(
-                  'eyebrow rounded-full border px-2.5 py-1 text-[9px]',
+                  'eyebrow rounded-full border px-2.5 py-1 text-[10px]',
                   isLive
-                    ? 'border-emerald-600/25 bg-emerald-600/[0.08] text-emerald-700'
+                    ? 'border-success/25 bg-success/[0.08] text-success'
                     : 'border-accent/30 bg-accent/[0.08] text-accent',
                 )}
               >
@@ -108,7 +108,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
           <div className="lg:col-span-7">
             <Reveal className="flex flex-col gap-5">
               {project.description.map((paragraph) => (
-                <p key={paragraph} className="text-[15.5px] leading-relaxed text-ink-2">
+                <p key={paragraph} className="text-[16.5px] leading-relaxed text-ink-2">
                   {paragraph}
                 </p>
               ))}
@@ -133,7 +133,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               <h2 className="eyebrow text-ink-3">Funcionalidades</h2>
               <ul className="mt-4 flex flex-col gap-2.5">
                 {project.features.map((feature) => (
-                  <li key={feature} className="text-[14px] text-ink">
+                  <li key={feature} className="text-[15px] text-ink">
                     {feature}
                   </li>
                 ))}
@@ -144,7 +144,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
               <h2 className="eyebrow text-ink-3">Stack técnico</h2>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {project.stack.map((tech) => (
-                  <li key={tech} className="rounded-full border border-line-strong px-3 py-1.5 text-[12.5px] text-ink-2">
+                  <li key={tech} className="rounded-full border border-line-strong px-3 py-1.5 text-[13.5px] text-ink-2">
                     {tech}
                   </li>
                 ))}

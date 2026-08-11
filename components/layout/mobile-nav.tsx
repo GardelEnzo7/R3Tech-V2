@@ -9,6 +9,7 @@ import { X } from 'lucide-react'
 import { Logo } from '@/components/ui/logo'
 import { CtaLink } from '@/components/ui/button'
 import { WhatsAppIcon } from '@/components/ui/icons'
+import { ThemeMenu } from '@/components/theme/theme-menu'
 import { nav, WHATSAPP_URL } from '@/lib/content'
 import { cn } from '@/lib/utils'
 
@@ -64,26 +65,26 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
           role="dialog"
           aria-modal="true"
           aria-label="Menú de navegación"
-          className="fixed inset-0 z-50 bg-void lg:hidden"
+          className="fixed inset-0 z-50 flex h-[100dvh] flex-col overflow-y-auto bg-paper lg:hidden"
           initial={{ clipPath: 'circle(0% at calc(100% - 44px) 40px)' }}
           animate={{ clipPath: 'circle(150% at calc(100% - 44px) 40px)' }}
           exit={{ clipPath: 'circle(0% at calc(100% - 44px) 40px)' }}
           transition={{ duration: 0.65, ease: easeOutExpo }}
         >
-          <div className="container-page flex h-20 items-center justify-between">
-            <Logo size="sm" eager tone="dark" />
+          <div className="container-page flex h-20 shrink-0 items-center justify-between">
+            <Logo size="sm" eager />
             <button
               ref={closeButtonRef}
               type="button"
               onClick={onClose}
               aria-label="Cerrar menú"
-              className="grid size-10 place-items-center rounded-full border border-void-line text-void-ink transition-colors duration-300 hover:border-void-line-strong"
+              className="grid size-10 place-items-center rounded-full border border-line-strong text-ink transition-colors duration-300 hover:border-ink/30 hover:bg-ink/[0.03]"
             >
               <X className="size-[18px]" />
             </button>
           </div>
 
-          <nav aria-label="Navegación móvil" className="container-page mt-6 flex flex-col">
+          <nav aria-label="Navegación móvil" className="container-page mt-6 flex shrink-0 flex-col">
             {nav.map((item, i) => {
               const active = pathname === item.href
               return (
@@ -92,7 +93,7 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
                   initial={{ opacity: 0, y: 16 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.25 + i * 0.06, duration: 0.5, ease: easeOutExpo }}
-                  className="border-b border-void-line"
+                  className="border-b border-line"
                 >
                   <Link
                     href={item.href}
@@ -100,11 +101,11 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
                     className="group/m flex items-center justify-between py-5"
                   >
                     <span className="flex items-baseline gap-4">
-                      <span className="eyebrow text-void-ink-3 tabular-nums">{String(i + 1).padStart(2, '0')}</span>
+                      <span className="eyebrow text-ink-3 tabular-nums">{String(i + 1).padStart(2, '0')}</span>
                       <span
                         className={cn(
-                          'text-[2rem] font-medium tracking-tight text-void-ink transition-colors sm:text-[2.5rem]',
-                          active && 'text-accent-cyan',
+                          'text-[2rem] font-medium tracking-tight text-ink transition-colors sm:text-[2.5rem]',
+                          active && 'text-accent',
                         )}
                       >
                         {item.label}
@@ -120,14 +121,21 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.25 + nav.length * 0.06, duration: 0.5, ease: easeOutExpo }}
-            className="container-page mt-10 flex flex-col gap-4"
+            className="container-page mt-10 shrink-0"
           >
             <CtaLink href={WHATSAPP_URL} external className="w-full">
               <WhatsAppIcon />
               Solicitar presupuesto
             </CtaLink>
-            <p className="eyebrow text-void-ink-3">{'R3 Tech · Rosario, Argentina'}</p>
           </motion.div>
+
+          <div className="container-page mt-auto flex shrink-0 items-center justify-between py-8">
+            <p className="eyebrow">
+              <span className="text-ink">R3 Tech</span> <span className="text-ink-3">·</span>{' '}
+              <span className="text-accent">Rosario, Argentina</span>
+            </p>
+            <ThemeMenu side="top" />
+          </div>
         </motion.div>
       ) : null}
     </AnimatePresence>

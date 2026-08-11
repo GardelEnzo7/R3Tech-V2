@@ -24,7 +24,7 @@ export function Trust() {
                   <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-accent/[0.08] text-accent">
                     <Check className="size-3.5" />
                   </span>
-                  <span className="text-[15px] text-ink">{benefit}</span>
+                  <span className="text-[16px] text-ink">{benefit}</span>
                 </RevealItem>
               ))}
             </RevealGroup>
