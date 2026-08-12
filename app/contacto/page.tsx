@@ -3,7 +3,9 @@ import { ArrowUpRight, Mail, MapPin } from 'lucide-react'
 
 import { Reveal, RevealGroup, RevealItem } from '@/components/motion/reveal'
 import { InstagramIcon, WhatsAppIcon } from '@/components/ui/icons'
-import { site, WHATSAPP_URL } from '@/lib/content'
+import { getWhatsAppUrl, site } from '@/lib/content'
+
+const WHATSAPP_URL = getWhatsAppUrl('Hola R3 Tech, quiero ponerme en contacto.')
 
 export const metadata: Metadata = {
   title: 'Contacto',

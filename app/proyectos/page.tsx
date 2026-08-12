@@ -4,7 +4,9 @@ import { CtaLink } from '@/components/ui/button'
 import { WhatsAppIcon } from '@/components/ui/icons'
 import { Reveal } from '@/components/motion/reveal'
 import { ProjectRow } from '@/components/projects/project-row'
-import { projects, WHATSAPP_URL } from '@/lib/content'
+import { getWhatsAppUrl, projects } from '@/lib/content'
+
+const WHATSAPP_URL = getWhatsAppUrl('Hola R3 Tech, quiero contarles sobre un proyecto que tengo en mente.')
 
 export const metadata: Metadata = {
   title: 'Proyectos',

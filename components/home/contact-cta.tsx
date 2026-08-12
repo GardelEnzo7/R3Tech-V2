@@ -3,7 +3,9 @@ import { ArrowUpRight, Rocket } from 'lucide-react'
 import { CtaLink } from '@/components/ui/button'
 import { WhatsAppIcon } from '@/components/ui/icons'
 import { Reveal } from '@/components/motion/reveal'
-import { site, WHATSAPP_URL } from '@/lib/content'
+import { getWhatsAppUrl, site } from '@/lib/content'
+
+const WHATSAPP_URL = getWhatsAppUrl('Hola R3 Tech, tengo una idea o un problema tecnológico y quiero hablarlo con ustedes.')
 
 export function ContactCta() {
   return (

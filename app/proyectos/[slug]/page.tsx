@@ -9,7 +9,7 @@ import { WhatsAppIcon } from '@/components/ui/icons'
 import { Reveal, RevealGroup, RevealItem } from '@/components/motion/reveal'
 import { CourtOsGraphic } from '@/components/projects/courtos-graphic'
 import { cn } from '@/lib/utils'
-import { getProjectBySlug, OG_IMAGE, projects, site, WHATSAPP_URL } from '@/lib/content'
+import { getProjectBySlug, getWhatsAppUrl, OG_IMAGE, projects, site } from '@/lib/content'
 
 export function generateStaticParams() {
   return projects.map((project) => ({ slug: project.slug }))
@@ -46,6 +46,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
   const currentIndex = projects.findIndex((p) => p.slug === project.slug)
   const next = projects[(currentIndex + 1) % projects.length]!
   const prev = projects[(currentIndex - 1 + projects.length) % projects.length]!
+  const whatsappUrl = getWhatsAppUrl(`Hola R3 Tech, vi el proyecto ${project.name} y quiero un proyecto similar.`)
 
   return (
     <>
@@ -121,7 +122,7 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
                   <ArrowUpRight className="size-4" />
                 </CtaLink>
               ) : null}
-              <CtaLink href={WHATSAPP_URL} external variant={isLive ? 'outline' : 'primary'}>
+              <CtaLink href={whatsappUrl} external variant={isLive ? 'outline' : 'primary'}>
                 <WhatsAppIcon />
                 Consultar un proyecto similar
               </CtaLink>

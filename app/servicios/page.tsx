@@ -4,7 +4,9 @@ import Link from 'next/link'
 import { ArrowGlyph, WhatsAppIcon } from '@/components/ui/icons'
 import { CtaLink } from '@/components/ui/button'
 import { Reveal, RevealGroup, RevealItem } from '@/components/motion/reveal'
-import { serviceCategories, services, WHATSAPP_URL } from '@/lib/content'
+import { getWhatsAppUrl, serviceCategories, services } from '@/lib/content'
+
+const WHATSAPP_URL = getWhatsAppUrl('Hola R3 Tech, no estoy seguro qué servicio necesito, ¿me pueden ayudar?')
 
 export const metadata: Metadata = {
   title: 'Servicios',

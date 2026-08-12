@@ -4,7 +4,9 @@ import { CtaLink } from '@/components/ui/button'
 import { WhatsAppIcon } from '@/components/ui/icons'
 import { Reveal, RevealGroup, RevealItem } from '@/components/motion/reveal'
 import { ProcessTimeline } from '@/components/home/process-timeline'
-import { benefits, WHATSAPP_URL } from '@/lib/content'
+import { benefits, getWhatsAppUrl } from '@/lib/content'
+
+const WHATSAPP_URL = getWhatsAppUrl('Hola R3 Tech, los conocí por la web y quiero hablar sobre mi proyecto.')
 import { Check } from 'lucide-react'
 
 export const metadata: Metadata = {

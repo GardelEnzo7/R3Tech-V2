@@ -9,7 +9,7 @@
   /* -- Ink (light-mode text) -- */
   --color-ink: #0b0d10;
   --color-ink-2: #4c4f55;
-  --color-ink-3: #6b6e74;
+  --color-ink-3: #696c72;
 
   /* -- Hairlines (light) -- */
   --color-line: #e5e2da;
@@ -50,6 +50,19 @@
   --animate-marquee: marquee 32s linear infinite;
   --animate-pulse-ring: pulse-ring 2.4s var(--ease-in-out-quart) infinite;
 
+  /*
+   * Hero above-the-fold entrance choreography, sm+ only (see hero.tsx). Driven
+   * by CSS animation rather than Framer Motion so the underlying element never
+   * has an opacity:0/translated "initial" state baked into the SSR HTML — on
+   * mobile the sm:animate-hero-* classes simply never apply, so the text is
+   * already in its final, paintable state on the very first frame (fixing an
+   * LCP render-delay regression where whichever hero text was still
+   * JS/opacity-gated kept becoming the next largest-contentful-paint culprit).
+   */
+  --animate-hero-eyebrow: hero-reveal-sm 0.6s ease-out both;
+  --animate-hero-paragraph: hero-reveal 0.8s var(--ease-out-expo) 0.55s both;
+  --animate-hero-ctas: hero-reveal 0.8s var(--ease-out-expo) 0.7s both;
+
   @keyframes marquee {
     to {
       transform: translateX(-50%);
@@ -69,6 +82,26 @@
       opacity: 0;
     }
   }
+  @keyframes hero-reveal-sm {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes hero-reveal {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 /*
@@ -86,7 +119,7 @@
 
     --color-ink: #f4f2ee;
     --color-ink-2: #a5a29c;
-    --color-ink-3: #78766f;
+    --color-ink-3: #838179;
 
     --color-line: rgba(244, 242, 238, 0.1);
     --color-line-strong: rgba(244, 242, 238, 0.16);
@@ -111,7 +144,7 @@
 
   --color-ink: #f4f2ee;
   --color-ink-2: #a5a29c;
-  --color-ink-3: #78766f;
+  --color-ink-3: #838179;
 
   --color-line: rgba(244, 242, 238, 0.1);
   --color-line-strong: rgba(244, 242, 238, 0.16);
@@ -162,6 +195,7 @@
 
   html {
     background: var(--color-paper);
+    scroll-behavior: smooth;
   }
 
   body {

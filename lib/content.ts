@@ -10,13 +10,18 @@ export const site = {
   mailto: 'mailto:r3tech24@gmail.com',
   instagram: 'https://www.instagram.com/r3tech.ar/?hl=es',
   instagramHandle: '@r3tech.ar',
-  whatsappNumber: '+54 9 341 251-3986',
+  whatsappNumber: '+54 9 341 251-6172',
   locale: 'es-AR',
   region: 'Rosario, Santa Fe, Argentina',
 } as const
 
-export const WHATSAPP_URL =
-  'https://wa.me/5493412513986?text=Hola%20R3%20Tech%2C%20quiero%20solicitar%20un%20presupuesto.'
+const WHATSAPP_NUMBER = '5493412516172'
+
+export function getWhatsAppUrl(message: string) {
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`
+}
+
+export const WHATSAPP_URL = getWhatsAppUrl('Hola R3 Tech, quiero solicitar un presupuesto.')
 
 /**
  * Next.js shallow-merges metadata per segment: a page that sets its own

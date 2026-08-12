@@ -7,7 +7,7 @@ import { CtaLink } from '@/components/ui/button'
 import { WhatsAppIcon } from '@/components/ui/icons'
 import { Reveal, RevealGroup, RevealItem } from '@/components/motion/reveal'
 import { ProjectRow } from '@/components/projects/project-row'
-import { getServiceBySlug, OG_IMAGE, projects, serviceCategories, services, site, WHATSAPP_URL } from '@/lib/content'
+import { getServiceBySlug, getWhatsAppUrl, OG_IMAGE, projects, serviceCategories, services, site } from '@/lib/content'
 
 export function generateStaticParams() {
   return services.map((service) => ({ slug: service.slug }))
@@ -47,6 +47,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
   const currentIndex = services.findIndex((s) => s.slug === service.slug)
   const next = services[(currentIndex + 1) % services.length]!
   const prev = services[(currentIndex - 1 + services.length) % services.length]!
+  const whatsappUrl = getWhatsAppUrl(`Hola R3 Tech, quiero consultar sobre el servicio de ${service.title}.`)
 
   return (
     <>
@@ -72,7 +73,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             <p className="mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-ink-2">{service.summary}</p>
 
             <div className="mt-9">
-              <CtaLink href={WHATSAPP_URL} external>
+              <CtaLink href={whatsappUrl} external>
                 <WhatsAppIcon />
                 Consultar por este servicio
               </CtaLink>
