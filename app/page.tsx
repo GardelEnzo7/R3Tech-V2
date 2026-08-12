@@ -9,14 +9,14 @@ import { ContactCta } from '@/components/home/contact-cta'
 import { OG_IMAGE, site } from '@/lib/content'
 
 export const metadata: Metadata = {
-  title: 'R3 Tech | Software a Medida, Desarrollo Web e IT Solutions',
+  title: 'R3 Tech | Software a Medida, Desarrollo Web y Automatización',
   description:
     'Desarrollamos software a medida, sitios web, ecommerce, SaaS, automatización y soporte IT para empresas en Rosario y Argentina. Tecnología pensada para resolver problemas reales de negocio.',
   alternates: { canonical: '/' },
   openGraph: {
     type: 'website',
     url: site.url,
-    title: 'R3 Tech | Software a Medida, Desarrollo Web e IT Solutions',
+    title: 'R3 Tech | Software a Medida, Desarrollo Web y Automatización',
     description: 'Construimos la tecnología que tu negocio necesita.',
     ...OG_IMAGE,
   },

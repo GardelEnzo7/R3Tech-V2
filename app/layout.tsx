@@ -16,7 +16,7 @@ import './globals.css'
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: 'R3 Tech | Software a Medida, Desarrollo Web e IT Solutions',
+    default: 'R3 Tech | Software a Medida, Sitios Web y Automatización',
     template: `%s | ${site.name}`,
   },
   description:
@@ -42,13 +42,13 @@ export const metadata: Metadata = {
     url: site.url,
     siteName: site.name,
     locale: 'es_AR',
-    title: 'R3 Tech | Software a Medida, Desarrollo Web e IT Solutions',
+    title: 'R3 Tech | Software a Medida, Desarrollo Web y Automatización',
     description: 'Construimos la tecnología que tu negocio necesita: software, sitios web, ecommerce, SaaS y soporte IT.',
     ...OG_IMAGE,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'R3 Tech | Software a Medida, Desarrollo Web e IT Solutions',
+    title: 'R3 Tech | Software a Medida, Desarrollo Web y Automatización',
     description: 'Construimos la tecnología que tu negocio necesita.',
     ...OG_IMAGE,
   },
