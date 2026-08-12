@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
-import { Analytics } from '@vercel/analytics/react'
 import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 
@@ -143,7 +142,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLdString }} />
         <Clarity />
         <GoogleAnalytics />
-        <Analytics />
       </body>
     </html>
   )
