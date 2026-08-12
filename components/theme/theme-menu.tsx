@@ -69,7 +69,16 @@ export function ThemeMenu({
   }
 
   const onRootBlur = (event: React.FocusEvent<HTMLDivElement>) => {
-    if (!rootRef.current?.contains(event.relatedTarget as Node)) setOpen(false)
+    // iOS Safari doesn't focus tapped buttons, so a tap on a menu option
+    // still blurs the previously-focused item but with relatedTarget=null
+    // (focus isn't moving to a specific new element). Closing on a null
+    // relatedTarget would unmount the tapped option before its click event
+    // fires, silently swallowing the tap. Only auto-close here for a real
+    // focus target outside the menu (e.g. Tab-ing past the last option) —
+    // outside clicks/taps are already handled correctly by onPointerDown.
+    if (event.relatedTarget && !rootRef.current?.contains(event.relatedTarget as Node)) {
+      setOpen(false)
+    }
   }
 
   return (
