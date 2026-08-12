@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     'Desarrollamos software a medida, sitios web, ecommerce, SaaS, automatización y soporte IT para empresas en Rosario y Argentina. Tecnología pensada para resolver problemas reales de negocio.',
   alternates: { canonical: '/' },
   openGraph: {
+    type: 'website',
     url: site.url,
     title: 'R3 Tech | Software a Medida, Desarrollo Web e IT Solutions',
     description: 'Construimos la tecnología que tu negocio necesita.',
