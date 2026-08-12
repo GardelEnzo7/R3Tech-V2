@@ -78,14 +78,14 @@ export function ProjectRow({ project, reverse = false }: { project: Project; rev
             <ArrowUpRight className="size-4 text-accent transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
           </Link>
 
-          {isLive && project.href ? (
+          {project.href ? (
             <a
               href={project.href}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-[14px] text-ink-2 transition-colors duration-300 hover:text-ink"
             >
-              Sitio en vivo
+              {isLive ? 'Sitio en vivo' : 'Ver demo'}
               <ArrowUpRight className="size-3.5" />
             </a>
           ) : null}

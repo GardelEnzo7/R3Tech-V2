@@ -218,7 +218,7 @@ export const serviceCategories: { id: ServiceCategory; label: string; descriptio
   },
 ]
 
-export type ProjectStatus = 'live' | 'in-development'
+export type ProjectStatus = 'live' | 'in-development' | 'concept'
 
 export type Project = {
   slug: string
@@ -267,11 +267,29 @@ export const projects: Project[] = [
       'Sitio web para una inmobiliaria de Rosario, con catálogo de propiedades filtrable, buscador por tipo de operación y zona, y contacto directo por WhatsApp.',
       'El diseño prioriza que una visita se convierta en una consulta concreta, con la menor fricción posible entre encontrar una propiedad y escribir por ella.',
     ],
-    features: ['Catálogo de propiedades', 'Buscador inteligente', 'Diseño responsive', 'WhatsApp integrado'],
+    features: ['Catálogo de propiedades', 'Buscador inteligente', 'Diseño responsive', 'WhatsApp integrado', 'Panel administrativo'],
     stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
     image: '/projects/ls-negocios-inmobiliarios.webp',
     imageAlt: 'Interfaz del sitio de LS Negocios Inmobiliarios con buscador de propiedades',
     href: 'https://lsnegociosinmobiliarios.netlify.app/',
+  },
+  {
+    slug: 'la-espanola-muebles',
+    name: 'La Española Muebles',
+    kind: 'Diseño y desarrollo web',
+    status: 'concept',
+    statusLabel: 'Propuesta',
+    summary:
+      'Propuesta de rediseño digital para La Española Muebles, enfocada en modernizar su presencia online, facilitar la exploración del catálogo y generar un contacto más directo con potenciales clientes.',
+    description: [
+      'La Española Muebles es una propuesta conceptual de R3 Tech para mostrar cómo podría modernizarse la presencia digital de una mueblería: catálogo organizado por categorías, productos destacados y un camino directo hacia la consulta por WhatsApp.',
+      'No es un proyecto contratado ni un cliente real — es una demo pensada para mostrar nuestro criterio de diseño y desarrollo aplicado a un negocio con catálogo de producto, priorizando una navegación clara y el contacto directo con el potencial comprador.',
+    ],
+    features: ['Catálogo de productos por categoría', 'Consulta directa por WhatsApp', 'Diseño responsive', 'Identidad visual renovada'],
+    stack: ['Next.js', 'React', 'Tailwind CSS'],
+    image: '/projects/la-espanola-muebles.webp',
+    imageAlt: 'Interfaz de la propuesta de La Española Muebles con catálogo de productos por categoría',
+    href: 'https://laespanolamuebles.netlify.app/',
   },
   {
     slug: 'courtos',

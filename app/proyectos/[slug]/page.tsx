@@ -116,13 +116,13 @@ export default async function ProjectDetailPage({ params }: { params: Promise<{ 
             </Reveal>
 
             <div className="mt-9 flex flex-wrap items-center gap-4">
-              {isLive && project.href ? (
+              {project.href ? (
                 <CtaLink href={project.href} external>
-                  Ver sitio en vivo
+                  {isLive ? 'Ver sitio en vivo' : 'Ver demo'}
                   <ArrowUpRight className="size-4" />
                 </CtaLink>
               ) : null}
-              <CtaLink href={whatsappUrl} external variant={isLive ? 'outline' : 'primary'}>
+              <CtaLink href={whatsappUrl} external variant={project.href ? 'outline' : 'primary'}>
                 <WhatsAppIcon />
                 Consultar un proyecto similar
               </CtaLink>
