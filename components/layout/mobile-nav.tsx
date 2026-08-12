@@ -25,6 +25,7 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
 
     const previousOverflow = document.documentElement.style.overflow
     document.documentElement.style.overflow = 'hidden'
+    document.documentElement.classList.add('mobile-nav-open')
     closeButtonRef.current?.focus()
 
     const onKey = (event: KeyboardEvent) => {
@@ -53,6 +54,7 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
     window.addEventListener('keydown', onKey)
     return () => {
       document.documentElement.style.overflow = previousOverflow
+      document.documentElement.classList.remove('mobile-nav-open')
       window.removeEventListener('keydown', onKey)
     }
   }, [open, onClose])

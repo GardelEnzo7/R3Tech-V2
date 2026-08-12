@@ -66,7 +66,7 @@ export function SiteFooter() {
             © {new Date().getFullYear()} {site.legalName}. Todos los derechos reservados.
           </p>
 
-          <div className="flex items-center gap-5">
+          <div className="flex flex-row-reverse items-center gap-5 sm:flex-row">
             <p className="eyebrow text-[10px] text-ink-3">{site.tagline}</p>
             <a
               href="#top"

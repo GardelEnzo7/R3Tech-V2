@@ -188,6 +188,18 @@
   display: inline-block;
 }
 
+/*
+ * The mobile nav overlay (MobileNav) toggles this class on <html> for as
+ * long as it's open. The WhatsApp FAB is fixed to the same bottom-right
+ * corner the overlay's own theme picker renders its dropdown near, and on
+ * mobile that overlap swallows taps meant for the theme options — hiding
+ * the FAB outright while the overlay is open removes it from hit-testing
+ * entirely instead of trying to out-stack it.
+ */
+html.mobile-nav-open .whatsapp-fab {
+  display: none;
+}
+
 @layer base {
   * {
     border-color: var(--color-line);
