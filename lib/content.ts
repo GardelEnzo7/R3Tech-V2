@@ -108,7 +108,7 @@ export const services: Service[] = [
       'Panel de contenidos cuando el proyecto lo requiere',
     ],
     forWho: 'Empresas, estudios y comercios que necesitan un sitio que transmita profesionalismo real.',
-    relatedProjectSlugs: ['lavalle-padel-club', 'ls-negocios-inmobiliarios'],
+    relatedProjectSlugs: ['lavalle-padel-club', 'ls-negocios-inmobiliarios', 'la-espanola-muebles'],
     keywords: ['desarrollo web', 'diseño web', 'páginas web Rosario', 'Next.js'],
   },
   {
