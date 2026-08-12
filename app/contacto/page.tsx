@@ -10,7 +10,7 @@ const WHATSAPP_URL = getWhatsAppUrl('Hola R3 Tech, quiero ponerme en contacto.')
 export const metadata: Metadata = {
   title: 'Contacto',
   description:
-    'Contactá a R3 Tech por WhatsApp, email o Instagram para hablar sobre tu proyecto de software, web o soporte IT.',
+    'Contactá a R3 Tech por WhatsApp, email o Instagram para hablar sobre tu proyecto de software, página web o soporte IT.',
   alternates: { canonical: '/contacto' },
 }
 

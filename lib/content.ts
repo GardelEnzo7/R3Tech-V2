@@ -4,7 +4,7 @@
 export const site = {
   name: 'R3 Tech',
   legalName: 'R3 Tech',
-  tagline: 'Software · Web · IT Solutions',
+  tagline: 'Software a Medida · Desarrollo Web · Soluciones IT',
   url: 'https://r3tech.site',
   email: 'r3tech24@gmail.com',
   mailto: 'mailto:r3tech24@gmail.com',
@@ -86,7 +86,7 @@ export const services: Service[] = [
     forWho:
       'Empresas con procesos que ya superaron lo que una planilla o una app genérica puede resolver.',
     relatedProjectSlugs: ['courtos'],
-    keywords: ['software a medida', 'desarrollo de software', 'sistema de gestión', 'Rosario'],
+    keywords: ['software a medida', 'desarrollo web', 'sistema de gestión', 'Rosario'],
   },
   {
     slug: 'desarrollo-web',
@@ -109,7 +109,7 @@ export const services: Service[] = [
     ],
     forWho: 'Empresas, estudios y comercios que necesitan un sitio que transmita profesionalismo real.',
     relatedProjectSlugs: ['lavalle-padel-club', 'ls-negocios-inmobiliarios', 'la-espanola-muebles'],
-    keywords: ['desarrollo web', 'diseño web', 'páginas web Rosario', 'Next.js'],
+    keywords: ['desarrollo web', 'diseño web', 'sitios web Rosario', 'Next.js'],
   },
   {
     slug: 'ecommerce',
@@ -209,7 +209,7 @@ export const serviceCategories: { id: ServiceCategory; label: string; descriptio
   {
     id: 'desarrollo',
     label: 'Desarrollo',
-    description: 'Software, web, ecommerce, SaaS y automatización.',
+    description: 'Software, desarrollo web, ecommerce, SaaS y automatización.',
   },
   {
     id: 'soporte',
