@@ -52,11 +52,6 @@ export const metadata: Metadata = {
     description: 'Construimos la tecnología que tu negocio necesita.',
     ...OG_IMAGE,
   },
-  icons: {
-    icon: '/brand/favicon.ico',
-    shortcut: '/brand/favicon.ico',
-    apple: '/apple-icon.png',
-  },
 }
 
 export const viewport: Viewport = {
