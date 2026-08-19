@@ -235,8 +235,33 @@ export type Project = {
   href: string | null
 }
 
-// Order is deliberate: CourtOS (in-development) must always render last.
+// Order is deliberate: LS Negocios Inmobiliarios leads as our most recent real,
+// published client project. CourtOS (in-development) must always render last.
 export const projects: Project[] = [
+  {
+    slug: 'ls-negocios-inmobiliarios',
+    name: 'LS Negocios Inmobiliarios',
+    kind: 'Plataforma inmobiliaria + panel de gestión',
+    status: 'live',
+    statusLabel: 'Publicado',
+    summary:
+      'Plataforma inmobiliaria integral para LS Negocios Inmobiliarios: sitio público con catálogo de propiedades pensado para captar clientes, y panel interno con CRM, gestión de propiedades y dashboard de indicadores.',
+    description: [
+      'Plataforma inmobiliaria desarrollada para LS Negocios Inmobiliarios, combinando una experiencia pública orientada a la captación de clientes con herramientas internas para centralizar propiedades, consultas y gestión comercial.',
+      'El sitio público incluye catálogo de propiedades, páginas individuales por propiedad, filtros de búsqueda, propiedades destacadas, información institucional y canales de contacto, con SEO técnico, dominio propio e indexación en Google. Por detrás, un panel administrativo permite gestionar propiedades, seguir consultas y clientes a través de un CRM, coordinar visitas, controlar actividad y roles del equipo, y visualizar todo desde un dashboard con indicadores — sobre una infraestructura construida con Next.js y Supabase.',
+    ],
+    features: [
+      'Catálogo y fichas de propiedades',
+      'Panel administrativo',
+      'CRM de consultas y clientes',
+      'Dashboard con indicadores',
+      'SEO técnico y dominio propio',
+    ],
+    stack: ['Next.js', 'React', 'TypeScript', 'Supabase'],
+    image: '/projects/ls-negocios-inmobiliarios.webp',
+    imageAlt: 'Interfaz del sitio de LS Negocios Inmobiliarios con catálogo de propiedades y panel de gestión',
+    href: 'https://inmobiliariasenmache.com.ar',
+  },
   {
     slug: 'lavalle-padel-club',
     name: 'Lavalle Padel Club',
@@ -254,24 +279,6 @@ export const projects: Project[] = [
     image: '/projects/lavalle-padel-club.webp',
     imageAlt: 'Interfaz del sitio de Lavalle Padel Club con reservas online de canchas de pádel',
     href: 'https://lavallepadelclub.netlify.app/',
-  },
-  {
-    slug: 'ls-negocios-inmobiliarios',
-    name: 'LS Negocios Inmobiliarios',
-    kind: 'Desarrollo web',
-    status: 'live',
-    statusLabel: 'Publicado',
-    summary:
-      'Sitio con catálogo de propiedades, buscador inteligente y experiencia moderna enfocada en convertir visitas en consultas.',
-    description: [
-      'Sitio web para una inmobiliaria de Rosario, con catálogo de propiedades filtrable, buscador por tipo de operación y zona, y contacto directo por WhatsApp.',
-      'El diseño prioriza que una visita se convierta en una consulta concreta, con la menor fricción posible entre encontrar una propiedad y escribir por ella.',
-    ],
-    features: ['Catálogo de propiedades', 'Buscador inteligente', 'Diseño responsive', 'WhatsApp integrado', 'Panel administrativo'],
-    stack: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
-    image: '/projects/ls-negocios-inmobiliarios.webp',
-    imageAlt: 'Interfaz del sitio de LS Negocios Inmobiliarios con buscador de propiedades',
-    href: 'https://lsnegociosinmobiliarios.netlify.app/',
   },
   {
     slug: 'la-espanola-muebles',

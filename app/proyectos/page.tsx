@@ -11,7 +11,7 @@ const WHATSAPP_URL = getWhatsAppUrl('Hola R3 Tech, quiero contarles sobre un pro
 export const metadata: Metadata = {
   title: 'Proyectos',
   description:
-    'Proyectos maquetados por R3 Tech y publicados en Netlify para verlos funcionando: sistemas de gestión, sitios web, además de CourtOS, nuestro producto en desarrollo.',
+    'Proyectos reales desarrollados por R3 Tech, publicados y funcionando: sistemas de gestión, sitios web y plataformas a medida, además de CourtOS, nuestro producto en desarrollo.',
   alternates: { canonical: '/proyectos' },
 }
 
@@ -23,11 +23,11 @@ export default function ProyectosPage() {
           <Reveal className="max-w-2xl">
             <span className="eyebrow text-ink-3">Proyectos</span>
             <h1 className="mt-5 text-[2.5rem] leading-[1.06] font-medium tracking-tight text-ink sm:text-[3.25rem]">
-              Proyectos maquetados, no solo ideas.
+              Proyectos reales, no solo ideas.
             </h1>
             <p className="mt-6 max-w-xl text-[1.0625rem] leading-relaxed text-ink-2">
-              Cada proyecto acá está maquetado y publicado en Netlify para que lo veas funcionando, o en desarrollo
-              activo. Sin clientes inventados, sin métricas infladas.
+              Cada proyecto acá está publicado para que lo veas funcionando —en producción para un cliente real,
+              como demo, o en desarrollo activo. Sin clientes inventados, sin métricas infladas.
             </p>
           </Reveal>
         </div>
